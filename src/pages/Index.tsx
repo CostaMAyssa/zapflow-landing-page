@@ -1,10 +1,16 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, MessageCircle, Users, FileText, BarChart2 } from "lucide-react";
 import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "@/components/ui/carousel";
 
 const Index = () => {
   return (
@@ -64,6 +70,42 @@ const Index = () => {
               title="Integração Webhook" 
               description="Conecte com CRMs, e-commerce e outras plataformas para automação completa do seu funil de vendas."
             />
+          </div>
+        </section>
+
+        {/* Carousel Section */}
+        <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Veja por dentro do ZapFlow</h2>
+            <p className="text-zapflow-textSecondary text-lg max-w-2xl mx-auto">
+              Conheça a interface intuitiva e as funcionalidades da nossa plataforma
+            </p>
+          </div>
+          
+          <div className="w-full max-w-5xl mx-auto px-4">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {[1, 2, 3, 4, 5].map((id) => (
+                  <CarouselItem key={id}>
+                    <div className="p-1">
+                      <Card className="border-zapflow-border bg-[#222222] overflow-hidden">
+                        <CardContent className="flex aspect-video items-center justify-center p-0">
+                          <img 
+                            src={`https://images.unsplash.com/photo-148859052850${id}-98d2b5aba04b?auto=format&fit=crop&q=80`} 
+                            alt={`Screenshot da plataforma ZapFlow ${id}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex items-center justify-center mt-8">
+                <CarouselPrevious className="relative static mx-2 bg-zapflow-primary text-black hover:bg-zapflow-hover hover:text-black" />
+                <CarouselNext className="relative static mx-2 bg-zapflow-primary text-black hover:bg-zapflow-hover hover:text-black" />
+              </div>
+            </Carousel>
           </div>
         </section>
 
