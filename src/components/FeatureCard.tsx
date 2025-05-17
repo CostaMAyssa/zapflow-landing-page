@@ -15,7 +15,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
         <div className="bg-zapflow-border/20 p-3 rounded-lg">
           {icon}
         </div>
-        <h3 className="text-xl font-semibold">{title}</h3>
+        <h3 className="text-xl font-semibold text-zapflow-primary">{title}</h3>
       </CardHeader>
       <CardContent>
         <p className="text-zapflow-textSecondary">{description}</p>

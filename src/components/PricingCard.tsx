@@ -21,9 +21,9 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, butto
         </div>
       )}
       <CardHeader className={`text-center pb-8 ${popular ? 'pt-8' : 'pt-6'}`}>
-        <CardTitle className="text-2xl">{title}</CardTitle>
+        <CardTitle className="text-2xl text-zapflow-primary">{title}</CardTitle>
         <div className="mt-4">
-          <span className="text-4xl font-bold">{price}</span>
+          <span className="text-4xl font-bold text-zapflow-primary">{price}</span>
           <span className="text-zapflow-textSecondary"> /único</span>
         </div>
       </CardHeader>
