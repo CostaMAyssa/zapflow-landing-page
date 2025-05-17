@@ -32,7 +32,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, butto
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
               <Check className="h-5 w-5 text-zapflow-primary mr-2 mt-0.5" />
-              <span>{feature}</span>
+              <span className="text-zapflow-primary">{feature}</span>
             </li>
           ))}
         </ul>
