@@ -14,7 +14,7 @@ interface PricingCardProps {
 
 const PricingCard: React.FC<PricingCardProps> = ({ title, price, features, buttonText, popular = false }) => {
   return (
-    <Card className={`border ${popular ? 'border-zapflow-primary' : 'border-zapflow-border'} relative flex flex-col h-full`}>
+    <Card className={`border bg-[#222222] ${popular ? 'border-zapflow-primary' : 'border-zapflow-border'} relative flex flex-col h-full`}>
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-zapflow-primary text-black font-medium py-1 px-4 rounded-full text-sm">
           Mais Popular

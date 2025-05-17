@@ -10,7 +10,7 @@ interface FeatureCardProps {
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
   return (
-    <Card className="bg-zapflow-border/20 border-zapflow-border hover:border-zapflow-primary/50 transition-all duration-300">
+    <Card className="bg-[#222222] border-zapflow-border hover:border-zapflow-primary/50 transition-all duration-300">
       <CardHeader className="flex flex-row items-center gap-4 pb-2">
         <div className="bg-zapflow-border/20 p-3 rounded-lg">
           {icon}
