@@ -12,7 +12,27 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 
+// Importando as imagens do carrossel
+import img1 from '@/lib/images/Captura de Tela 2025-05-22 às 04.35.39.png';
+import img2 from '@/lib/images/Captura de Tela 2025-05-22 às 04.37.20.png';
+import img3 from '@/lib/images/Captura de Tela 2025-05-22 às 04.37.41.png';
+import img4 from '@/lib/images/Captura de Tela 2025-05-22 às 04.38.18.png';
+import img5 from '@/lib/images/Captura de Tela 2025-05-22 às 04.38.41.png';
+import img6 from '@/lib/images/Captura de Tela 2025-05-22 às 04.39.05.png';
+import img7 from '@/lib/images/Captura de Tela 2025-05-22 às 04.39.26.png';
+
 const Index = () => {
+  // Array com todas as imagens do carrossel
+  const carouselImages = [
+    { src: img1, alt: "Screenshot da plataforma ZapFlow 1" },
+    { src: img2, alt: "Screenshot da plataforma ZapFlow 2" },
+    { src: img3, alt: "Screenshot da plataforma ZapFlow 3" },
+    { src: img4, alt: "Screenshot da plataforma ZapFlow 4" },
+    { src: img5, alt: "Screenshot da plataforma ZapFlow 5" },
+    { src: img6, alt: "Screenshot da plataforma ZapFlow 6" },
+    { src: img7, alt: "Screenshot da plataforma ZapFlow 7" },
+  ];
+
   return (
     <div className="min-h-screen bg-zapflow-background text-zapflow-text overflow-x-hidden">
       <div className="bg-zapflow-gradient">
@@ -85,14 +105,14 @@ const Index = () => {
           <div className="w-full max-w-5xl mx-auto px-4">
             <Carousel className="w-full">
               <CarouselContent>
-                {[1, 2, 3, 4, 5].map((id) => (
-                  <CarouselItem key={id}>
+                {carouselImages.map((image, index) => (
+                  <CarouselItem key={index}>
                     <div className="p-1">
                       <Card className="border-zapflow-border bg-[#222222] overflow-hidden">
                         <CardContent className="flex aspect-video items-center justify-center p-0">
                           <img 
-                            src={`https://images.unsplash.com/photo-148859052850${id}-98d2b5aba04b?auto=format&fit=crop&q=80`} 
-                            alt={`Screenshot da plataforma ZapFlow ${id}`}
+                            src={image.src} 
+                            alt={image.alt}
                             className="w-full h-full object-cover"
                           />
                         </CardContent>
