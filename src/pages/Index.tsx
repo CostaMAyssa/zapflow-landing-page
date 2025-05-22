@@ -12,27 +12,42 @@ import {
   CarouselPrevious 
 } from "@/components/ui/carousel";
 
-// Importando as imagens do carrossel
-import img1 from '@/lib/images/Captura de Tela 2025-05-22 às 04.35.39.png';
-import img2 from '@/lib/images/Captura de Tela 2025-05-22 às 04.37.20.png';
-import img3 from '@/lib/images/Captura de Tela 2025-05-22 às 04.37.41.png';
-import img4 from '@/lib/images/Captura de Tela 2025-05-22 às 04.38.18.png';
-import img5 from '@/lib/images/Captura de Tela 2025-05-22 às 04.38.41.png';
-import img6 from '@/lib/images/Captura de Tela 2025-05-22 às 04.39.05.png';
-import img7 from '@/lib/images/Captura de Tela 2025-05-22 às 04.39.26.png';
+// URL base para imagens
+const baseUrl = import.meta.env.MODE === 'production' ? '/zapflow-landing-page' : '';
+
+// Imagens do carrossel
+const carouselImages = [
+  { 
+    src: `${baseUrl}/images/screenshot1.png`, 
+    alt: "Screenshot da plataforma ZapFlow 1" 
+  },
+  { 
+    src: `${baseUrl}/images/screenshot2.png`, 
+    alt: "Screenshot da plataforma ZapFlow 2" 
+  },
+  { 
+    src: `${baseUrl}/images/screenshot3.png`, 
+    alt: "Screenshot da plataforma ZapFlow 3" 
+  },
+  { 
+    src: `${baseUrl}/images/screenshot4.png`, 
+    alt: "Screenshot da plataforma ZapFlow 4" 
+  },
+  { 
+    src: `${baseUrl}/images/screenshot5.png`, 
+    alt: "Screenshot da plataforma ZapFlow 5" 
+  },
+  { 
+    src: `${baseUrl}/images/screenshot6.png`, 
+    alt: "Screenshot da plataforma ZapFlow 6" 
+  },
+  { 
+    src: `${baseUrl}/images/screenshot7.png`, 
+    alt: "Screenshot da plataforma ZapFlow 7" 
+  }
+];
 
 const Index = () => {
-  // Array com todas as imagens do carrossel
-  const carouselImages = [
-    { src: img1, alt: "Screenshot da plataforma ZapFlow 1" },
-    { src: img2, alt: "Screenshot da plataforma ZapFlow 2" },
-    { src: img3, alt: "Screenshot da plataforma ZapFlow 3" },
-    { src: img4, alt: "Screenshot da plataforma ZapFlow 4" },
-    { src: img5, alt: "Screenshot da plataforma ZapFlow 5" },
-    { src: img6, alt: "Screenshot da plataforma ZapFlow 6" },
-    { src: img7, alt: "Screenshot da plataforma ZapFlow 7" },
-  ];
-
   return (
     <div className="min-h-screen bg-zapflow-background text-zapflow-text overflow-x-hidden">
       <div className="bg-zapflow-gradient">
