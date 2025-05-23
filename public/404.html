@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ZapFlow</title>
+  <script type="text/javascript">
+    // Solução para o GitHub Pages com SPAs
+    // Redireciona para a página principal com hash routing
+    var pathSegmentsToKeep = 1; // Ajuste para o número de segmentos no seu repositório
+
+    var l = window.location;
+    var port = l.port ? ':' + l.port : '';
+    
+    // Reconstrói a URL com hash para o Router do React
+    var redirectUrl = l.protocol + '//' + l.hostname + port + 
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/#/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/');
+      
+    // Adiciona qualquer parte da query string
+    if (l.search) {
+      redirectUrl += l.search;
+    }
+    
+    window.location.replace(redirectUrl);
+  </script>
+</head>
+<body>
+</body>
+</html>
