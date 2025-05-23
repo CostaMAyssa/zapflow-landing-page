@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZapFlow - Plataforma de Automação para WhatsApp</title>
-    <meta name="description" content="ZapFlow - Automatize seus disparos em massa, extração de contatos e acompanhe suas campanhas no WhatsApp com métricas em tempo real." />
-    <meta name="author" content="ZapFlow" />
-    <link rel="icon" href="/zapflow-landing-page/favicon.png" type="image/png" />
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ZapFlow</title>
+  <script>
+    // Solução para redirecionar para a página principal no GitHub Pages
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    var segmentCount = 1; // Ajuste para o nome do seu repositório (zapflow-landing-page)
 
-    <meta property="og:title" content="ZapFlow - Automação para WhatsApp" />
-    <meta property="og:description" content="Plataforma de automação de WhatsApp para disparos em massa, extração de contatos e métricas em tempo real." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    var l = window.location;
+    var href = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + 
+              l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/#' + 
+              l.pathname.slice(1).split('/').slice(segmentCount).join('/') + 
+              (l.search ? l.search : '');
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@zapflow" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <script type="module" crossorigin src="/zapflow-landing-page/assets/index-CY7Eqz2Q.js"></script>
-    <link rel="stylesheet" crossorigin href="/zapflow-landing-page/assets/index-BezRMfw-.css">
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-  </body>
+    window.location.href = href;
+  </script>
+</head>
+<body>
+  <noscript>
+    <strong>Redirecionando para a página principal...</strong>
+    <a href="https://costamayssa.github.io/zapflow-landing-page/#/">Clique aqui se não for redirecionado automaticamente</a>
+  </noscript>
+</body>
 </html>
