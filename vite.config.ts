@@ -5,7 +5,8 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/zapflow-landing-page/' : '/',
+  // Sempre use o path base para GitHub Pages em produu00e7u00e3o
+  base: '/zapflow-landing-page/',
   server: {
     host: "::",
     port: 8080,
