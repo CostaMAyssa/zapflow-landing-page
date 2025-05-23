@@ -5,17 +5,32 @@
   <title>ZapFlow</title>
   <script>
     // Solução para redirecionar para a página principal no GitHub Pages
-    // Single Page Apps for GitHub Pages
-    // https://github.com/rafgraph/spa-github-pages
-    var segmentCount = 1; // Ajuste para o nome do seu repositório (zapflow-landing-page)
-
-    var l = window.location;
-    var href = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + 
-              l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/#' + 
-              l.pathname.slice(1).split('/').slice(segmentCount).join('/') + 
-              (l.search ? l.search : '');
-
-    window.location.href = href;
+    // Baseado em: https://github.com/rafgraph/spa-github-pages
+    (function() {
+      // Essa é uma solução para SPAs hospedadas no GitHub Pages
+      // Redireciona todas as requisições para index.html
+      var repo = 'zapflow-landing-page'; // Nome do seu repositório
+      var l = window.location;
+      
+      if (l.pathname.split('/')[1] === repo) {
+        // Estamos acessando via username.github.io/repo-name
+        var pathSegments = l.pathname.split('/');
+        pathSegments.splice(0, 2); // Remove '' e 'repo-name'
+        
+        var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                         '/' + repo + '/#/' + pathSegments.join('/') +
+                         (l.search ? l.search : '');
+        
+        window.location.replace(redirectUrl);
+      } else {
+        // Acesso direto ou outro padrão de URL
+        var redirectUrl = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+                         '/zapflow-landing-page/#' + l.pathname.slice(1) +
+                         (l.search ? l.search : '');
+        
+        window.location.replace(redirectUrl);
+      }
+    })();
   </script>
 </head>
 <body>
